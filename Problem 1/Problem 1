@@ -1,0 +1,19 @@
+let string = "toshit   chetule "
+let newString = string.replace(/\s/g, '')
+
+
+function getCount(newString){
+const letters = {};
+for(let i=0;i<newString.length;i++)
+{
+    const ch = newString[i];
+    if(!letters[ch])
+    {
+        letters[ch] = 0;
+    }
+    letters[ch]++;
+}
+return letters;
+}
+
+console.log( getCount(newString.toUpperCase()) ) ;
